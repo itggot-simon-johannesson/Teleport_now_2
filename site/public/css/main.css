@@ -21,6 +21,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    top: 0;
 }
 
 .white {
@@ -63,12 +64,12 @@ input[placeholder="Search a location"] {}
 }
 
 .magnifier {
-    width: 32.2px;
-    height: 32.2px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     position: fixed;
-    margin-left: 9px;
-    margin-top: 5px;
+    margin-left: 86%;
+    margin-top: 10px;
 }
 
 .magnifier_img {
@@ -77,16 +78,16 @@ input[placeholder="Search a location"] {}
 }
 
 .voice {
-    width: 32.2px;
-    height: 32.2px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     position: fixed;
-    margin-left: 85%;
-    margin-top: 5px;
+    margin-left: 9px;
+    margin-top: 10px;
 }
 
 @media (min-width: 600px) {
-    .voice {
+    .magnifier {
         margin-left: 528.688px;
     }
 }
@@ -141,6 +142,30 @@ nav {
     .nav_symbol {
         width: 35px;
         height: 35px;
+        text-align: center;
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 35px;
+        color: white;
+        /* Preferred icon size */
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        margin: 0;
+        padding: 0;
+        /* Support for all WebKit browsers. */
+        -webkit-font-smoothing: antialiased;
+        /* Support for Safari and Chrome. */
+        text-rendering: optimizeLegibility;
+        /* Support for Firefox. */
+        -moz-osx-font-smoothing: grayscale;
+        /* Support for IE. */
+        font-feature-settings: 'liga';
     }
 }
 
@@ -165,7 +190,7 @@ nav {
     color: white;
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
-    font-size: 14pt;
+    font-size: 12pt;
     margin: 0;
     text-transform: uppercase;
     padding: 0;
@@ -186,159 +211,179 @@ nav {
     color: #2196f3;
 }
 
-.lower {
-    width: inherit;
-    height: 225vh;
-    display: flex;
-    flex-direction: row;
+#map {
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
 }
 
-.container {
-    height: inherit;
-    width: 50%;
+.fab {
+    width: 65px;
+    height: 65px;
+    z-index: 100;
+    position: absolute;
+    position: fixed;
+    top: 88%;
+    left: 80%;
+    background-color: #2196f3;
+    border-radius: 100%;
+    border-top: solid #65b5f5 2px;
     display: flex;
-    margin-top: 112px;
     flex-direction: row;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media (max-height: 568px) {
+    .fab {
+        top: 84%;
+        left: 77%;
+    }
+}
+
+.add {
+    font-family: 'Material Icons';
+    color: white;
+    font-size: 25pt;
+    margin: 0;
+    margin-top: 25%;
+    z-index: 100;
+}
+
+.go {
+    color: white;
+    font-size: 13pt;
+    margin: 0;
+    margin-top: 30%;
+    z-index: 100;
+}
+
+.lower {
+    width: 100%;
+    height: 1647px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
 }
 
-.container2 {
-    width: 202px;
+.in_lower {
     height: inherit;
-    margin: 0;
-    padding: 0;
+    width: 97vw;
+    padding-left: 2px;
+    padding-right: 2px;
+    max-width: 399.625px;
+}
+
+.top_margin {
+    height: 16vh;
+    width: inherit;
+    max-height: 150.547px;
+    min-height: 105.547px;
 }
 
 .ruta {
-    height: 202px;
-    width: 202px;
+    height: 47vw;
+    width: 47vw;
+    max-width: 193.625px;
+    max-height: 193.625px;
     background-color: red;
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin: 2px;
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    float: left;
 }
 
-.text_box {
-    height: 35%;
-    width: inherit;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: row;
+@media (max-width: 265px) {
+    .in_lower {
+        display: flex;
+        flex-direction: column;
+    }
+    .ruta {
+        max-width: none;
+        max-height: none;
+        width: 100%;
+        padding-top: 100%;
+    }
 }
 
-.text_container {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.city_name {
-    color: white;
-    margin-left: 20px;
-}
-
-.star {
-    width: 15px;
-    height: 14px;
-    margin-left: 5px;
-    margin-top: 16px;
-}
-
-.star_img {
-    width: inherit;
-    height: inherit;
-}
-
-
-/*.search_bar {
-  background-color: white;
-  height: 48px;
-  width: 95vw;
-  border-radius: 2px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}*/
-
-
-/*
-#one_one {
+#one {
     background-image: url("../img/Goteborg.jpg");
-    margin-top: 10px;
 }
 
-#one_two {
+#two {
     background-image: url("../img/Tokyo.jpg");
 }
 
-#one_three {
+#three {
     background-image: url("../img/Venedig.jpg");
 }
 
-#one_four {
-    background-image: url("../img/");
-}
-
-#one_five {
-    background-image: url("../img/");
-}
-
-#one_six {
-    background-image: url("../img/");
-}
-
-#one_seven {
-    background-image: url("../img/");
-}
-
-#one_eight {
-    background-image: url("../img/");
-}
-
-#two_one {
+#four {
     background-image: url("../img/NewYork.jpg");
-    margin-top: 10px;
 }
 
-#two_two {
+#five {
     background-image: url("../img/Amsterdam.jpg");
 }
 
-#two_three {
+#six {
     background-image: url("../img/Prag.jpg");
 }
 
-#two_four {
+#seven {
     background-image: url("../img/");
 }
 
-#two_five {
+#eight {
     background-image: url("../img/");
 }
 
-#two_six {
+#nine {
     background-image: url("../img/");
 }
 
-#two_seven {
+#ten {
     background-image: url("../img/");
 }
 
-#two_eight {
+#eleven {
+    background-image: url("../img/");
+}
+
+#twelve {
+    background-image: url("../img/");
+}
+
+#thirteen {
+    background-image: url("../img/");
+}
+
+#fourteen {
+    background-image: url("../img/");
+}
+
+#fifteen {
+    background-image: url("../img/");
+}
+
+#sixteen {
+    background-image: url("../img/");
+}
+
+#seventeen {
+    background-image: url("../img/");
+}
+
+#eighteen {
     background-image: url("../img/");
 }
 
 
-.lower {
+/*.lower {
   display: flex;
   flex-direction: row;
   height: 200vh;

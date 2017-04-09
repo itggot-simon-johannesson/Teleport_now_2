@@ -2,14 +2,16 @@
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <meta charset="utf-8"/>
         <title>Teleport Now</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="./js/main.js"></script>
+
     </head>
 
-    <body>
+    <body nload="startTime()">
+        <script src="./js/main.js"></script>
         <header>
             <div class="white">
                 <div class="magnifier"><img class="magnifier_img" src="./img/magnifier.svg"></div>
@@ -22,25 +24,49 @@
         <nav>
     <a href="./index.html" class="nav_link">
         <div class="in_nav">
-            <img class="nav_symbol" src="./img/star.svg">
+            <i class="nav_symbol">star_rate</i>
             <p class="nav_text">favourites</p>
         </div>
     </a>
 
     <a href="./trending.html" class="nav_link">
         <div class="in_nav">
-            <img class="nav_symbol" src="./img/trending.svg">
+            <i class="nav_symbol">trending_up</i>
             <p class="nav_text">TRENDING</p>
         </div>
     </a>
 
     <a href="./map.html" class="nav_link">
         <div class="in_nav" id="nav_selected_line">
-            <img class="nav_symbol" src="./img/map.svg">
+            <i class="nav_symbol" id="nav_selected_text">map</i>
             <p class="nav_text" id="nav_selected_text">MAP</p>
         </div>
     </a>
 </nav>
+
+<div class="fab" id="fab">
+  <p class="go">GO</p>
+</div>
+
+<div id="map"></div>
+
+<script>
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(57.70887, 11.97456),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoomControl: false,
+            mapTypeControl: false,
+            scaleControl: false,
+            streetViewControl: false,
+            rotateControl: false,
+            fullscreenControl: false
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKAnZ1e1GAiwh5ScC7wRk7wVrxuFohdPg&callback=myMap"></script>
 
     </body>
 </html>
