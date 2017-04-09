@@ -2,11 +2,12 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-}
+    background-color: #eeeeee;
+  }
 
 header {
     width: 100%;
@@ -265,6 +266,12 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: #eeeeee;
+}
+
+#lower_trending {
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .in_lower {
@@ -275,19 +282,93 @@ nav {
     max-width: 399.625px;
 }
 
+.show_favourites {
+    width: 100%;
+    height: 5%;
+}
+
+.lista {
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.list_object {
+    background-color: white;
+    width: 100%;
+    height: 72px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.list_number {
+    height: 100%;
+    width: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.in_number {
+    margin: 0;
+    margin-top: 26.766px;
+    color: #767676;
+    font-size: 13px;
+}
+
+.list_img {
+    height: 50px;
+    width: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 2px;
+    margin-top: 12.359px;
+    margin-right: 15px;
+}
+
+.list_txt {
+    height: 100%;
+    width: 50%;
+}
+
+.in_txt {
+    margin: 0;
+}
+
+#list_city {
+    margin-top: 12.359px;
+    font-size: 15px;
+}
+
+#list_country {
+    font-size: 13px;
+    color: #555555;
+}
+
+#list_time {
+    font-size: 13px;
+    color: #767676;
+}
+
 .top_margin {
     height: 16vh;
     width: inherit;
     max-height: 150.547px;
     min-height: 105.547px;
+    background-color: #eeeeee;
 }
 
 .ruta {
-    height: 47vw;
-    width: 47vw;
-    max-width: 193.625px;
-    max-height: 193.625px;
-    background-color: red;
+    height: 47.5vw;
+    width: 47.5vw;
+    max-width: 195.688px;
+    max-height: 195.688px;
+    /*background-color: red;*/
     margin: 2px;
     background-size: cover;
     background-position: center;
@@ -297,17 +378,55 @@ nav {
     float: left;
 }
 
-@media (max-width: 265px) {
-    .in_lower {
-        display: flex;
-        flex-direction: column;
-    }
+@media (max-width: 393px) {
     .ruta {
-        max-width: none;
-        max-height: none;
-        width: 100%;
-        padding-top: 100%;
+        height: 47vw;
+        width: 47vw;
     }
+}
+
+.black_box {
+    width: 100%;
+    height: 33%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.ruta_txt {
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 0;
+    margin-left: 5%;
+    font-size: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#time {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ruta_symbol {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 15px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
 
 #one {
@@ -335,77 +454,133 @@ nav {
 }
 
 #seven {
-    background-image: url("../img/");
+    background-image: url("../img/Krakow.jpg");
 }
 
 #eight {
-    background-image: url("../img/");
+    background-image: url("../img/Berlin.jpg");
 }
 
 #nine {
-    background-image: url("../img/");
+    background-image: url("../img/Dresden.jpg");
 }
 
 #ten {
-    background-image: url("../img/");
+    background-image: url("../img/Riverwood.jpg");
 }
 
 #eleven {
-    background-image: url("../img/");
+    background-image: url("../img/Columbia.jpg");
 }
 
 #twelve {
-    background-image: url("../img/");
+    background-image: url("../img/City17.jpg");
 }
 
 #thirteen {
-    background-image: url("../img/");
+    background-image: url("../img/Paris.jpg");
 }
 
 #fourteen {
-    background-image: url("../img/");
+    background-image: url("../img/Hanamura.jpg");
 }
 
 #fifteen {
-    background-image: url("../img/");
+    background-image: url("../img/Rio-de-janeiro.jpg");
 }
 
 #sixteen {
-    background-image: url("../img/");
+    background-image: url("../img/PalletTown.jpg");
 }
 
 #seventeen {
-    background-image: url("../img/");
+    background-image: url("../img/Glasgow.jpg");
 }
 
 #eighteen {
-    background-image: url("../img/");
+    background-image: url("../img/Auckland.jpg");
 }
 
+#list_img_one {
+    background-image: url("../img/Rome.jpg");
+}
 
-/*.lower {
-  display: flex;
-  flex-direction: row;
-  height: 200vh;
-  width: 100vw;
-  margin: 0;
+#list_img_two {
+    background-image: url("../img/Paris.jpg");
 }
-.etttvåtre {
-  width: 50%;
-  height: inherit;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 0;
-  margin-top: 112px;
-  background-color: blue;
+
+#list_img_three {
+    background-image: url("../img/Barcelona.jpg");
 }
-.rut_container {
+
+#list_img_four {
+    background-image: url("../img/London.jpg");
 }
-.ruta {
-  height: 175px;
-  width: 175px;
-  background-color: red;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}*/
+
+#list_img_five {
+    background-image: url("../img/Berlin.jpg");
+}
+
+#list_img_six {
+    background-image: url("../img/Edinburgh.jpg");
+}
+
+#list_img_seven {
+    background-image: url("../img/Florence.jpg");
+}
+
+#list_img_eight {
+    background-image: url("../img/Mexico.jpg");
+}
+
+#list_img_nine {
+    background-image: url("../img/Vancouver.jpg");
+}
+
+#list_img_ten {
+    background-image: url("../img/Salzburg.jpg");
+}
+
+#list_img_eleven {
+    background-image: url("../img/Sydney.jpg");
+}
+
+#list_img_twelve {
+    background-image: url("../img/Nuremberg.jpg");
+}
+
+#list_img_thirteen {
+    background-image: url("../img/Stockholm.jpg");
+}
+
+#list_img_fourteen {
+    background-image: url("../img/Budapest.jpg");
+}
+
+#list_img_fifteen {
+    background-image: url("../img/HongKong.jpg");
+}
+
+#list_img_sixteen {
+    background-image: url("../img/Istanbul.jpg");
+}
+
+#list_img_seventeen {
+    background-image: url("../img/Goteborg.jpg");
+}
+
+#list_img_eighteen {
+    background-image: url("../img/Madrid.jpg");
+}
+
+#list_img_nineteen {
+    background-image: url("../img/Copenhagen.jpg");
+}
+
+#list_img_twenty {
+    background-image: url("../img/Jerusalem.jpg");
+}
+
+#list_img_twentyone {
+    background-image: url("../img/Zurich.jpg");
+}
