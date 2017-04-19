@@ -7,11 +7,10 @@
         <title>Teleport Now</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/main.css">
-
+        <script src="./js/main.js"></script>
     </head>
 
     <body nload="startTime()">
-        <script src="./js/main.js"></script>
         <header>
             <div class="white">
                 <div class="magnifier"><img class="magnifier_img" src="./img/magnifier.svg"></div>
@@ -46,8 +45,20 @@
 
 <div class="top_margin"></div>
 <div class="lower" id="lower_trending">
-    <div class="show_favourites"></div>
 
+    <div class="show_favourites_container">
+        <div class="in_fav_container" id="fav_left">
+            <p class="show_favourites">Show favourites</p>
+        </div>
+
+        <div class="in_fav_container" id="fav_right">
+            <div class="switch" onclick="js_toggle_switch();js_toggle_in_switch();js_toggle_favourites()">
+                <div class="in_switch"></div>
+            </div>
+        </div>
+    </div>
+
+<div class="mid">
     <div class="lista">
         <div class="list_object">
             <div class="list_number">
@@ -57,11 +68,11 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Rome</p>
                 <p class="in_txt" id="list_country">Italy</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
-        <div class="list_object">
+        <div class="list_object favourites">
             <div class="list_number">
                 <p class="in_number">2</p>
             </div>
@@ -69,7 +80,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Paris</p>
                 <p class="in_txt" id="list_country">France</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -81,7 +92,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Barcelona</p>
                 <p class="in_txt" id="list_country">Spain</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -93,11 +104,11 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">London</p>
                 <p class="in_txt" id="list_country">The United Kingdom, England</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
-        <div class="list_object">
+        <div class="list_object favourites">
             <div class="list_number">
                 <p class="in_number">5</p>
             </div>
@@ -105,7 +116,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Berlin</p>
                 <p class="in_txt" id="list_country">Germany</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -117,7 +128,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Edinburgh</p>
                 <p class="in_txt" id="list_country">The United Kingdom, Scotland</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -129,7 +140,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Florence</p>
                 <p class="in_txt" id="list_country">Italy</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -141,7 +152,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">San Miguel de Allende</p>
                 <p class="in_txt" id="list_country">Mexico</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -153,7 +164,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Vancouver</p>
                 <p class="in_txt" id="list_country">Canada</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -165,7 +176,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Salzburg</p>
                 <p class="in_txt" id="list_country">Austria</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -177,7 +188,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Sydney</p>
                 <p class="in_txt" id="list_country">Australia</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -189,7 +200,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Nuremberg</p>
                 <p class="in_txt" id="list_country">Germany</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -201,7 +212,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Stockholm</p>
                 <p class="in_txt" id="list_country">Sweden</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -213,7 +224,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Budapest</p>
                 <p class="in_txt" id="list_country">Hungary</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -225,7 +236,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Hong Kong</p>
                 <p class="in_txt" id="list_country">China</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -237,11 +248,11 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Istanbul</p>
                 <p class="in_txt" id="list_country">Turkey</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
-        <div class="list_object">
+        <div class="list_object favourites">
             <div class="list_number">
                 <p class="in_number">17</p>
             </div>
@@ -249,7 +260,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Gothenburg</p>
                 <p class="in_txt" id="list_country">Sweden</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -261,7 +272,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Madrid</p>
                 <p class="in_txt" id="list_country">Spain</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -273,7 +284,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Copenhagen</p>
                 <p class="in_txt" id="list_country">Denmark</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -285,7 +296,7 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Jerusalem</p>
                 <p class="in_txt" id="list_country">Israel</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
@@ -297,11 +308,12 @@
             <div class="list_txt">
                 <p class="in_txt" id="list_city">Zurich</p>
                 <p class="in_txt" id="list_country">Switzerland</p>
-                <p class="in_txt" id="list_time">time</p>
+                <p class="in_txt" id="list_time">00:00</p>
             </div>
         </div>
 
     </div>
+  </div>
 
 </div>
 

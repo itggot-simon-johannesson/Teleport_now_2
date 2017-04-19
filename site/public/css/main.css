@@ -7,7 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     background-color: #eeeeee;
-  }
+}
 
 header {
     width: 100%;
@@ -282,9 +282,83 @@ nav {
     max-width: 399.625px;
 }
 
-.show_favourites {
+.show_favourites_container {
     width: 100%;
-    height: 5%;
+    height: 4%;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: 677px) {
+    .show_favourites_container {
+        position: fixed;
+    }
+
+    .mid {
+      margin-top: 35.234px;
+    }
+}
+
+.in_fav_container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+#fav_left {
+    justify-content: flex-start;
+}
+
+.show_favourites {
+    color: #767676;
+    font-size: 13px;
+    margin: 0;
+    margin-top: 24px;
+    margin-left: 6%;
+}
+
+#fav_right {
+    justify-content: flex-end;
+}
+
+.switch {
+    background-color: #2196f3;
+    width: 34px;
+    height: 14px;
+    border-radius: 6px;
+    margin-top: 23px;
+    margin-right: 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.switch_toggle {
+    background-color: white;
+}
+
+.in_switch {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    margin-left: 16px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.in_switch_toggle {
+    margin-left: 0px;
+}
+
+.mid {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .lista {
@@ -294,6 +368,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    max-width: 412px;
 }
 
 .list_object {
@@ -304,6 +379,10 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+}
+
+.favourites_toggle {
+    display: none;
 }
 
 .list_number {
@@ -338,6 +417,8 @@ nav {
 
 .in_txt {
     margin: 0;
+    text-overflow: ellipsis;
+
 }
 
 #list_city {
